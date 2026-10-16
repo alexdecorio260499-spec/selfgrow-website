@@ -220,7 +220,7 @@ export default function BusinessPage() {
             <div className="lg:col-span-6">
               <div className="relative aspect-4/3 bg-linen-light p-6 border border-border rounded-sm shadow-sm overflow-hidden">
                 <Image
-                  src="/images/products/80-holes-front.jpg"
+                  src="/images/products/80-holes-main.jpg"
                   alt="SelfGrow AM4-T Commercial Hydroponic Cabinet"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

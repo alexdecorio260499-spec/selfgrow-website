@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PRODUCTS } from '@/data/products';
 import ProductCard from '@/components/products/ProductCard';
-import ProductComparisonTable from '@/components/comparison/ProductComparisonTable';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
@@ -113,21 +112,23 @@ export default function SystemsPage() {
           </div>
         </section>
 
-        {/* Section 3: Technical Comparison Table */}
-        <section id="compare" className="scroll-mt-24 pt-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-            <span className="text-xs uppercase tracking-widest text-sage font-bold">
-              Engineering Breakdown
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal">
-              Detailed Specifications Matrix
-            </h2>
-            <p className="text-sm text-charcoal-muted">
-              Side-by-side technical evaluation across all 4 verified models.
-            </p>
+        {/* Comparison Callout */}
+        <section className="bg-white border border-border rounded-sm p-8 sm:p-12 text-center space-y-4">
+          <span className="text-xs uppercase tracking-widest text-sage font-bold">
+            Model Evaluation
+          </span>
+          <h2 className="font-serif text-3xl text-charcoal">
+            Compare Specifications Side-by-Side
+          </h2>
+          <p className="text-sm text-charcoal-muted max-w-xl mx-auto leading-relaxed">
+            Review growing capacities, footprints, water tank autonomy, and power consumption
+            across all four models in our interactive matrix.
+          </p>
+          <div className="pt-2">
+            <Button href="/compare" variant="forest-outline" size="md">
+              Open Comparison Matrix →
+            </Button>
           </div>
-
-          <ProductComparisonTable />
         </section>
       </div>
 

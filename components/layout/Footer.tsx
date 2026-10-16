@@ -101,8 +101,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/systems#compare" className="text-sprout hover:underline inline-flex items-center gap-1 font-medium pt-1">
+                <Link href="/compare" className="text-sprout hover:underline inline-flex items-center gap-1 font-medium pt-1">
                   Compare Systems <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/find-your-system" className="text-linen-light/80 hover:text-white transition-colors">
+                  Find Your System Quiz
                 </Link>
               </li>
             </ul>

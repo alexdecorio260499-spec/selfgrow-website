@@ -101,7 +101,7 @@ export default function HomeSystemsPage() {
             <Button href="/systems/commercial" variant="primary">
               View Commercial Cabinets
             </Button>
-            <Button href="/systems#compare" variant="outline">
+            <Button href="/compare" variant="outline">
               Compare All Models
             </Button>
           </div>

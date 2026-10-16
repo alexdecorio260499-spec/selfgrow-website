@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, ArrowRight, Sprout, Building2, Home as HomeIcon } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight, Sprout, Building2, Home as HomeIcon, Sparkles, ArrowRightLeft } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
@@ -66,7 +66,6 @@ export default function Header() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: 'Home', href: '/' },
     {
       label: 'Growing Systems',
       href: '/systems',
@@ -75,27 +74,34 @@ export default function Header() {
         {
           title: 'All Systems',
           href: '/systems',
-          description: 'Browse the full range of countertop and vertical commercial systems',
+          description: 'Browse the full range of countertop planters and vertical cabinets',
           icon: Sprout,
         },
         {
           title: 'Home Systems',
           href: '/systems/home',
-          description: 'Compact 8 and 12-hole countertop planters for kitchens & living spaces',
+          description: 'Compact 8 and 12-pod countertop planters for everyday kitchens',
           icon: HomeIcon,
         },
         {
           title: 'Commercial Systems',
           href: '/systems/commercial',
-          description: 'High-yield 72 and 80-hole vertical cabinets for restaurants & hospitality',
+          description: 'Multi-tier 72 and 80-pod architectural cabinets for hospitality',
           icon: Building2,
+        },
+        {
+          title: 'Compare All Models',
+          href: '/compare',
+          description: 'Side-by-side comparison of capacities, footprints, and power draw',
+          icon: ArrowRightLeft,
         },
       ],
     },
+    { label: 'Compare', href: '/compare' },
     { label: 'How It Works', href: '/how-it-works' },
-    { label: 'What Can You Grow?', href: '/what-can-you-grow' },
-    { label: 'Our Story', href: '/about' },
+    { label: 'What to Grow', href: '/what-can-you-grow' },
     { label: 'For Business', href: '/business' },
+    { label: 'Our Story', href: '/about' },
   ];
 
   return (
@@ -218,13 +224,14 @@ export default function Header() {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="/support"
-              className="text-xs uppercase tracking-wider font-medium text-charcoal-muted hover:text-forest transition-colors py-2 px-1 focus-visible:outline-forest"
+              href="/find-your-system"
+              className="text-xs uppercase tracking-wider font-semibold text-forest hover:text-forest-dark transition-colors py-2 px-1 focus-visible:outline-forest flex items-center gap-1.5"
             >
-              FAQ & Support
+              <Sparkles className="w-3.5 h-3.5 text-sage" />
+              Find Your System
             </Link>
             <Button href="/contact" size="sm" variant="primary">
-              Enquire Now
+              Enquire
             </Button>
           </div>
 
@@ -275,6 +282,18 @@ export default function Header() {
                     className="block text-sm text-charcoal-muted hover:text-forest"
                   >
                     • Commercial & Hospitality Cabinets
+                  </Link>
+                  <Link
+                    href="/compare"
+                    className="block text-sm text-charcoal-muted hover:text-forest font-medium text-forest"
+                  >
+                    • Compare All Models
+                  </Link>
+                  <Link
+                    href="/find-your-system"
+                    className="block text-sm text-charcoal-muted hover:text-forest font-medium text-forest"
+                  >
+                    • Find Your System (Quiz)
                   </Link>
                 </div>
               </div>
